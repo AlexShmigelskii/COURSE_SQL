@@ -22,7 +22,7 @@
 SQL запрос:
 
 SELECT author, 
-	     SUM(price * amount) as 'Стоимость',
+       SUM(price * amount) as 'Стоимость',
        ROUND((SUM(price * amount) * 18 / 100) / (1 + (18 / 100)), 2) AS 'НДС',
        ROUND((SUM(price * amount)) / (1 + (18 / 100)), 2) AS 'Стоимость_без_НДС'
 FROM book
